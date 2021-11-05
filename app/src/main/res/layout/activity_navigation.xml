@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.inudev.ygbatikar.activity.NavigationActivity">
+
+    <fragment
+        android:id="@+id/map_view"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.inudev.ygbatikar.com.inudev.ygbatikar.NavigationActivity" />
+
+    <com.inudev.ygbatikar.helper.ArrowNavigationView
+        android:id="@+id/compassView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.beyondar.android.view.CameraView
+            android:id="@+id/camera_compass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/ar_relay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.inudev.ygbatikar.helper.ArrowNavigationView
+                android:id="@+id/compassViewAR"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="150dp" />
+
+            <fragment
+                android:id="@+id/arview_compass"
+                android:name="com.beyondar.android.fragment.BeyondarFragmentSupport"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/bearing_compass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="-"
+                android:textColor="@color/navigation_color"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <com.inudev.ygbatikar.helper.NeoSans
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:gravity="center|bottom"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="Jarak"
+                android:textColor="@color/navigation_color" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/jarak_compass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:gravity="center|bottom"
+                android:padding="10dp"
+                android:text="-"
+                android:textColor="@color/navigation_color" />
+
+            <com.inudev.ygbatikar.helper.NeoSans
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:gravity="center|bottom"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="Arahkan ke Arah dan Sudut"
+                android:textColor="@color/navigation_color" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/bearingt_to_Pertokoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:gravity="center|bottom"
+                android:padding="10dp"
+                android:text="-"
+                android:textColor="@color/navigation_color" />
+
+            <ImageView
+                android:id="@+id/change_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_ar_camera_black_24dp"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/bearing_radian_compass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                android:gravity="center|bottom"
+                android:padding="10dp"
+                android:text="-"
+                android:textColor="@color/navigation_color"
+                android:textSize="43sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/lat_origin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="125dp"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/ic_location_on_black_compass_24dp"
+            android:padding="10dp"
+            android:text="-"
+            android:textColor="@color/white_trans"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/long_origin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/ic_location_on_black_compass_24dp"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="-"
+            android:textColor="@color/white_trans"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+
+</FrameLayout>

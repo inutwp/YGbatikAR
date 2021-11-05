@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e0e0e0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.inudev.ygbatikar.activity.InfoPertokoanActivity"
+    tools:ignore="Orientation"
+    tools:showIn="@layout/activity_info_pertokoan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.inudev.ygbatikar.helper.NeoSans
+                android:id="@+id/nama_pertokoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/icons"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingStart="5dp"
+                android:paddingTop="10dp"
+                android:text="Toko Batik Melayu"
+                android:textColor="@color/Primary_Light_Material_900"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/short_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama_pertokoan"
+                android:background="@color/icons"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="MALIOBORO,YOGYAKARTA"
+                android:textColor="@color/secondary_text"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+
+            <com.inudev.ygbatikar.helper.NeoSansLight
+                android:id="@+id/notif_operasional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/short_alamat"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/bg_notif_buka"
+                android:paddingBottom="2dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="15dp"
+                android:text="Buka"
+                android:textColor="@color/icons"
+                android:textSize="20sp"
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/icons"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="12dp">
+
+            <RatingBar
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:isIndicator="true"
+                android:stepSize="0.1"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginRight="85dp"
+                android:background="@color/Primary_Light_Material_300" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.inudev.ygbatikar.helper.LatoText
+                    android:id="@+id/waktu_operasional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Setiap Hari : 08:00 - 20:00"
+                    android:textColor="@color/Primary_Light_Material_Navigation"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginRight="85dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/Primary_Light_Material_300" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/alamat_pertokoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/navigation_color"
+            android:visibility="gone" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/icons">
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/ke_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:drawableTop="@drawable/ic_near_me_black_24dp"
+                android:drawablePadding="3dp"
+                android:text="Ke Lokasi"
+                android:textColor="#00796b"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/streetview"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/streetview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_streetview_black_24dp"
+                android:drawablePadding="3dp"
+                android:text="360 View"
+                android:textColor="#da552f"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/call_pertokoan"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ke_navigation"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/call_pertokoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_call_black_24dp"
+                android:drawablePadding="3dp"
+                android:text="Call"
+                android:textColor="#0288d1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/share_pertokoan"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/streetview"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/share_pertokoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_share_black_24dp"
+                android:drawablePadding="3dp"
+                android:text="Share"
+                android:textColor="#d81b60"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/call_pertokoan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/view_AR_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/icons"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                app:srcCompat="@drawable/ic_006_augmented_reality_2"
+                tools:ignore="ContentDescription" />
+
+            <com.inudev.ygbatikar.helper.NeoSansLight
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Lihat dengan Augmented Reality"
+                android:textSize="17.5sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.inudev.ygbatikar.helper.NeoSans
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/icons"
+                android:paddingBottom="5dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:text="Lokasi Pertokoan"
+                android:textColor="@color/Primary_Light_Material_700"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="UselessParent">
+
+                    <fragment
+                        android:id="@+id/info_maps_pertokoan"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        tools:context="com.inudev.ygbatikar.com.inudev.ygbatikar.MapsDetailActivity" />
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:background="@color/icons"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/info_alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/ic_location_on_black_24dp_detail"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:text="Jl.Malioboro No.21 Margoyudan Yogyakarta"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/transparancy_ntoko" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/info_notelepon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/ic_call_black_24dp"
+                android:text="082136108963"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/transparancy_ntoko" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/ic_time_black_24dp"
+                android:text="Operasional"
+                android:textColor="@color/primary_text"
+                android:typeface="sans" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rlHariSenin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/hariSenin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senin"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOperasionalSenin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@id/rlHariSenin"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/operasional1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="08:00 - 21:00"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHariSelasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlHariSenin"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/hariSelasa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selasa"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOperasionalSelasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlOperasionalSenin"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@id/rlHariSelasa"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/operasional2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="08:00 - 21:00"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHariRabu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlHariSelasa"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/hariRabu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rabu"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOperasionalRabu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlOperasionalSelasa"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@id/rlHariRabu">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/operasional3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="15dp"
+                        android:text="08:00 - 21:00"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHariKamis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlHariRabu"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/hariKamis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kamis"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOperasionalKamis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlOperasionalRabu"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@id/rlHariKamis">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/operasional4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:text="08:00 - 21:00"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHariJumat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlHariKamis"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/hariJumat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jumat"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOperasionalJumat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlOperasionalKamis"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@id/rlHariJumat">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/operasional5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:text="08:00 - 21:00"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHariSabtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlHariJumat"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/hariSabtu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sabtu"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOperasionalSabtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlOperasionalJumat"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@id/rlHariSabtu">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/operasional6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="11dp"
+                        android:text="08:00 - 21:00"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHariMinggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlHariSabtu"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/hariMinggu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minggu"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOperasionalMinggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlOperasionalSabtu"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@id/rlHariMinggu">
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/operasional7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08:00 - 21:00"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

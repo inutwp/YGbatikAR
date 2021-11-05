@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_Detail"
+        android:enabled="true"
+        android:icon="@mipmap/ic_info"
+        android:title="@string/title_detail_Detail"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigation_Share"
+        android:enabled="true"
+        android:icon="@drawable/ic_share"
+        android:title="@string/title_detail_Share"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigation_Call"
+        android:enabled="true"
+        android:icon="@mipmap/ic_call"
+        android:title="@string/title_detail_Call"
+        app:showAsAction="ifRoom" />
+
+</menu>

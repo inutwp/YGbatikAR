@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.inudev.ygbatikar.activity.CariSekitarkuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/RL_cari_pertokoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#263238"
+                android:fitsSystemWindows="true"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <com.inudev.ygbatikar.helper.LatoText
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center"
+                    android:text="Cari Pertokoan"
+                    android:textColor="@color/icons"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <SearchView
+                    android:id="@+id/SV_cari_pertokoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app_bar"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:queryHint="Cari Pertokoan" />
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/RL_cari_pertokoan">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/swipeRefresh">
+
+                <RelativeLayout
+                    android:id="@+id/RV_checkInternetConnection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="70dp">
+
+                    <RelativeLayout
+                        android:id="@+id/RV_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/image_checkInternet"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <com.inudev.ygbatikar.helper.NeoSans
+                        android:id="@+id/TV_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/RV_check"
+                        android:gravity="center"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="20dp"
+                        android:textColor="@color/Primary_Light_Material_900"
+                        android:textSize="20sp"
+                        android:visibility="visible" />
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/TV_check2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TV_check"
+                        android:gravity="center"
+                        android:paddingLeft="50dp"
+                        android:paddingRight="50dp"
+                        android:visibility="visible" />
+
+                    <com.inudev.ygbatikar.helper.NeoSans
+                        android:id="@+id/refresh_check_connection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TV_check2"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/accent"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="175dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/avload"
+                        style="@style/AVLoadingIndicatorView.Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:indicatorColor="@color/Primary_Light_Material_700"
+                        app:indicatorName="BallBeatIndicator" />
+
+                    <com.inudev.ygbatikar.helper.LatoText
+                        android:id="@+id/loading_text_cari_pertokoan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Harap Tunggu"
+                        android:textColor="@color/Primary_Light_Material_900"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_view_cari_pertokoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    tools:ignore="RtlCompat" />
+            </RelativeLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/RL_cari_pertokoan"
+        android:layout_gravity="bottom"
+        android:background="@color/Primary_Light_Material_900">
+
+        <com.inudev.ygbatikar.helper.NeoSans
+            android:id="@+id/filterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Urutkan"
+            android:textColor="@color/icons"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filterJambuka"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+            tools:layout_conversion_wrapHeight="104"
+            tools:layout_conversion_wrapWidth="215" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/filterJambuka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_access_time_black_filterjambuka_24dp"
+            android:drawableLeft="@drawable/ic_access_time_black_filterjambuka_24dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/icons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filterAlamat"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/filterText"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+            tools:layout_conversion_wrapHeight="63"
+            tools:layout_conversion_wrapWidth="270" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/filterAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_place_black_filteralamat_24dp"
+            android:drawableLeft="@drawable/ic_place_black_filteralamat_24dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/icons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filterNama"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/filterJambuka"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+            tools:layout_conversion_wrapHeight="63"
+            tools:layout_conversion_wrapWidth="228" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/filterNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:drawableStart="@drawable/ic_store_black_filternama_24dp"
+            android:drawableLeft="@drawable/ic_store_black_filternama_24dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/icons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/filterAlamat"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+            tools:layout_conversion_wrapHeight="63"
+            tools:layout_conversion_wrapWidth="209" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

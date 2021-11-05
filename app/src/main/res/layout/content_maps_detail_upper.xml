@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/icons"
+        android:orientation="vertical">
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/origin_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_001_placeholder_2"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_001_placeholder_2"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="Your Location"
+            android:textColor="@color/Primary_Light_Flat_Navigation" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="9dp"
+            android:layout_alignBottom="@id/origin_location"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/dash_line_vertical" />
+
+        <TextView
+            android:id="@+id/jarak_marker_meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/origin_location"
+            android:layout_alignEnd="@id/origin_location"
+            android:layout_alignRight="@id/origin_location"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:text="-"
+            android:textColor="@color/Primary_Light_Material_900"
+            tools:ignore="RtlSymmetry" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/name_alamat_toko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/origin_location"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:drawableLeft="@drawable/ic_013_placeholder"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_013_placeholder"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:text="Jl.Malioboro no 2 Km 1"
+            android:textColor="@color/Primary_Light_ProductHunt_Navigation" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@drawable/ic_004_pedestrian"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_004_pedestrian"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="-"
+            android:textColor="@color/Primary_Light_Material_900" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_002_car"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_002_car"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="-"
+            android:textColor="@color/Primary_Light_Material_900" />
+    </LinearLayout>
+</LinearLayout>

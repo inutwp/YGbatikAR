@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/Arygbatik"
+        android:name="com.beyondar.android.fragment.BeyondarFragmentSupport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avload"
+            style="@style/AVLoadingIndicatorView.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:indicatorColor="@color/Primary_Light_Material_700"
+            app:indicatorName="BallBeatIndicator" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/loading_text_ar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Harap Tunggu"
+            android:textColor="@color/Primary_Light_Material_900"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_margin="5dp"
+        android:background="@mipmap/radar_bg_small"
+        tools:ignore="RtlHardcoded">
+
+        <com.beyondar.android.plugin.radar.RadarView
+            android:id="@+id/radarview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/radar_north_small" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_check_internet_connection_ar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/icons"
+        android:gravity="center"
+        android:paddingBottom="30dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/RL_image_check_cari_pertokoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_checkInternet_ar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/internetconnection"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <com.inudev.ygbatikar.helper.NeoSans
+            android:id="@+id/TV_check_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RL_image_check_cari_pertokoan"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="20dp"
+            android:text="Sepertinya koneksi anda terputus"
+            android:textColor="@color/Primary_Light_Material_900"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/TV_check2_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TV_check_ar"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Pastikan anda terhubung dengan koneksi internet dan coba lagi"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_Ar_Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_ar_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="50dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_seekbar_ar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/textMaxDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Jarak Max : 0 m"
+            android:textColor="@color/icons"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBarMaxDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="6dip"
+            android:layout_toEndOf="@id/textMaxDistance"
+            android:layout_toRightOf="@id/textMaxDistance"
+            android:progressDrawable="@drawable/custom_seek_bar"
+            android:thumb="@drawable/ic_fiber_manual_record_black_24dp" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/textDistanceFactor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekBarMaxDistance"
+            android:text="Jarak AR : 0 m"
+            android:textColor="@color/icons" />
+
+        <SeekBar
+            android:id="@+id/seekDistanceFactor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textDistanceFactor"
+            android:layout_alignEnd="@+id/seekBarMaxDistance"
+            android:layout_alignLeft="@+id/seekBarMaxDistance"
+            android:layout_alignRight="@+id/seekBarMaxDistance"
+            android:layout_alignStart="@+id/seekBarMaxDistance"
+            android:progressDrawable="@drawable/custom_seek_bar"
+            android:thumb="@drawable/ic_fiber_manual_record_black_24dp" />
+    </RelativeLayout>
+
+</FrameLayout>

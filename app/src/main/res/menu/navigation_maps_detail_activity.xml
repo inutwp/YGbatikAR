@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_maps_detail_Help"
+        android:icon="@mipmap/ic_help"
+        android:title="@string/title_maps_detail_Help" />
+
+    <item
+        android:id="@+id/navigation_maps_detail_Arahkan"
+        android:icon="@mipmap/ic_direction"
+        android:title="@string/title_maps_detail_Arahkan" />
+
+    <item
+        android:id="@+id/navigation_maps_detail_AR"
+        android:icon="@mipmap/ic_camera"
+        android:title="@string/title_maps_detail_AR" />
+
+</menu>

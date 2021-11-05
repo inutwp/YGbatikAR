@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rL_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pic_toko"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY" />
+
+            <com.inudev.ygbatikar.helper.LatoText
+                android:id="@+id/notif_operasional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/pic_toko"
+                android:background="@color/Primary_Light_Flat_Navigation"
+                android:gravity="left"
+                android:padding="10dp"
+                android:textColor="@color/icons"
+                android:textSize="12sp"
+                tools:ignore="RtlHardcoded,SmallSp" />
+
+            <com.inudev.ygbatikar.helper.NeoSans
+                android:id="@+id/nama_toko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/pic_toko"
+                android:layout_alignEnd="@id/pic_toko"
+                android:layout_alignLeft="@id/pic_toko"
+                android:layout_alignRight="@id/pic_toko"
+                android:layout_alignStart="@id/pic_toko"
+                android:layout_marginTop="158dp"
+                android:background="@color/transparancy_ntoko"
+                android:gravity="bottom"
+                android:padding="8dp"
+                android:textColor="@color/icons"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama_toko"
+                android:background="@color/Primary_Light_Material_900"
+                android:orientation="vertical">
+
+                <com.inudev.ygbatikar.helper.LatoText
+                    android:id="@+id/alamat_toko"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_location_list_pertokoan_24dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_location_list_pertokoan_24dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/icons"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.inudev.ygbatikar.helper.LatoText
+                    android:id="@+id/jarak_toko"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_near_me_black_direction_24dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_near_me_black_direction_24dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/icons"
+                    android:visibility="gone"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

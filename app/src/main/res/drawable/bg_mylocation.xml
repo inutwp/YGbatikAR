@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- other shapes are oval, line ,ring -->
+
+    <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp" />
+    <!-- Use these attributes for the rest of the corners
+        android:topLeftRadius="integer"
+        android:topRightRadius="integer"
+        android:bottomLeftRadius="integer"  -->
+
+    <gradient
+        android:centerColor="@color/Primary_Light_Material_700"
+        android:endColor="@color/Primary_Light_Material_700"
+        android:startColor="@color/Primary_Light_Material_700"
+        android:type="linear" />
+    <!-- Other types are radial and sweep -->
+
+    <!-- <solid
+         android:color="#00d4ff" /> -->
+    <!-- You should use a solid tag instead of
+    a gradient tag for a single solid color -->
+
+    <!-- <padding
+         android:left="integer"
+         android:top="integer"
+         android:right="integer"
+         android:bottom="integer" /> -->
+    <!-- If you want to specify padding -->
+</shape>

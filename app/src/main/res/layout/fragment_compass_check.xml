@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.inudev.ygbatikar.activity.CompassSensorCheckFragment">
+
+    <RelativeLayout
+        android:id="@+id/RL_check_sensor_compass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/icons"
+        android:gravity="center"
+        android:paddingBottom="30dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/RL_image_check_sensor_compass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_checkSensor_compass"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/compass"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <com.inudev.ygbatikar.helper.NeoSans
+            android:id="@+id/TV_check_compass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RL_image_check_sensor_compass"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="20dp"
+            android:text="Oops! Sensor Kompass tidak tersedia"
+            android:textColor="@color/Primary_Light_Material_900"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/TV_check2_compass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TV_check_compass"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Untuk dapat menggunakan fitur AR dibutuhkan beberapa sensor antara lain sensor kompas"
+            android:visibility="visible" />
+    </RelativeLayout>
+</LinearLayout>

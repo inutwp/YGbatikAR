@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#90a4ae</item>
+        <item name="colorPrimaryDark">@color/Primary_Light_Material_1000</item>
+        <item name="colorAccent">@color/Primary_Light_Material_900</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/icons</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="N">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- style Navigation -->
+    <style name="Navigation">
+        <item name="android:background">@color/Primary_Light_Flat_Navigation</item>
+        <item name="android:itemBackground">@color/icons</item>
+        <item name="itemIconTint">@color/icons</item>
+        <item name="itemTextColor">@color/icons</item>
+        <item name="paddingStart">6dp</item>
+        <item name="paddingEnd">6dp</item>
+    </style>
+
+    <!-- style Navigation Detail -->
+    <style name="Navigation_Detail">
+        <item name="android:background">@color/Primary_Light_Flat_Navigation</item>
+        <item name="android:itemBackground">@color/icons</item>
+        <item name="itemIconTint">@color/icons</item>
+        <item name="itemTextColor">@color/icons</item>
+        <item name="paddingStart">6dp</item>
+        <item name="paddingEnd">6dp</item>
+    </style>
+
+    <!-- style Navigation Maps -->
+    <style name="Navigation_Maps">
+        <item name="android:background">@color/Primary_Light_Material_900</item>
+        <item name="android:itemBackground">@color/icons</item>
+        <item name="itemIconTint">@color/icons</item>
+        <item name="itemTextColor">@color/icons</item>
+        <item name="paddingStart">6dp</item>
+        <item name="paddingEnd">6dp</item>
+    </style>
+
+    <!-- style Navigation Maps Detail -->
+    <style name="Navigation_Maps_Detail">
+        <item name="android:background">@color/Primary_Light_Whatsapp_Navigation</item>
+        <item name="android:itemBackground">@color/icons</item>
+        <item name="itemIconTint">@color/icons</item>
+        <item name="itemTextColor">@color/icons</item>
+        <item name="paddingStart">6dp</item>
+        <item name="paddingEnd">6dp</item>
+    </style>
+
+    <style name="AlerterTitleApperance">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="AlerterTextApperance">
+        <item name="android:textStyle">italic</item>
+    </style>
+</resources>

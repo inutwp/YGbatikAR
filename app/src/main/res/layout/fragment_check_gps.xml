@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.inudev.ygbatikar.activity.CheckGPSFragment">
+
+    <RelativeLayout
+        android:id="@+id/RL_check_gps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/icons"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Primary_Light_Material_700">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_check_gps_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:srcCompat="@drawable/ic_close_check_gps_black_24dp"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_image_check_gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_check_gps"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/gps"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <com.inudev.ygbatikar.helper.NeoSans
+            android:id="@+id/TV_check_gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RL_image_check_gps"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="20dp"
+            android:text="Oops! Sepertinya GPS belum aktif"
+            android:textColor="@color/Primary_Light_Material_900"
+            android:textSize="17sp"
+            android:visibility="visible" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:id="@+id/TV_check2_gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TV_check_gps"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Tap pada gambar untuk mengaktifkan GPS"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,149 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inudev.ygbatikar.activity.AboutFragment">
+
+    <LinearLayout
+        android:id="@+id/RL_about_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_drag_handle_black_24dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL_about_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_about"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_ygbatikar" />
+
+            <com.inudev.ygbatikar.helper.NeoSans
+                android:id="@+id/version_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/image_about"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/image_about"
+                android:layout_toRightOf="@+id/image_about"
+                android:text="v1.0"
+                android:textColor="@color/Primary_Light_Material_900"
+                android:textSize="27sp" />
+        </RelativeLayout>
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Ketahui lokasi pertokoan batik di malioboro dengan mudah dan cepat berkat fitur Augmented Reality Markerless Location Based."
+            android:textColor="@color/Primary_Light_Material_700" />
+
+        <com.inudev.ygbatikar.helper.LatoText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="Aplikasi ini dibangun sebagai syarat kelulusan S1 Prodi Sistem Informasi pada Universitas AMIKOM Yogyakarta dengan judul Skripsi Pencarian Pertokoan Batik di Malioboror dengan Augmented Reality"
+            android:textColor="@color/Primary_Light_Material_700" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/RL_privacypolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/num_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_looks_one_black_24dp" />
+
+                <com.inudev.ygbatikar.helper.NeoSans
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/num_1"
+                    android:layout_toRightOf="@id/num_1"
+                    android:text="Privacy Policy" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RL_iconlibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/num_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_looks_two_black_24dp" />
+
+                <com.inudev.ygbatikar.helper.NeoSans
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/num_2"
+                    android:layout_toRightOf="@id/num_2"
+                    android:text="Icon and Library" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/info_kampus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/num_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_looks_3_black_24dp" />
+
+                <com.inudev.ygbatikar.helper.NeoSans
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/num_3"
+                    android:layout_toRightOf="@id/num_3"
+                    android:text="Universitas Amikom Yogyakarta" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
